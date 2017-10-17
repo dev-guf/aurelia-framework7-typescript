@@ -121,5 +121,15 @@
     "ts-jest": "^20.0.6",
     "tslint": "^5.4.3",
     "typescript": "^2.3.2"
+  },
+  "aurelia": {
+    "build": {
+      "resources": [
+        "aurelia-framework7-typescript/components/f7-nav-bar",
+        "aurelia-framework7-typescript/components/f7-nav-left",
+        "aurelia-framework7-typescript/components/f7-nav-right",
+        "aurelia-framework7-typescript/components/f7-view"
+      ]
+    }
   }
 }
