@@ -3,11 +3,12 @@ System.register(["./services/Framework7Engine", "aurelia-framework"], function (
     var __moduleName = context_1 && context_1.id;
     function configure(aurelia) {
         aurelia.globalResources([
-            aurelia_framework_1.PLATFORM.moduleName('./components/F7View'),
-            aurelia_framework_1.PLATFORM.moduleName('./components/F7Pages'),
-            aurelia_framework_1.PLATFORM.moduleName('./components/F7Page'),
-            aurelia_framework_1.PLATFORM.moduleName('./components/F7Navbar'),
-            aurelia_framework_1.PLATFORM.moduleName('./components/F7NavLeft')
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-bar'),
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-left'),
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-right'),
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-page'),
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-pages'),
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-view')
         ]);
     }
     exports_1("configure", configure);

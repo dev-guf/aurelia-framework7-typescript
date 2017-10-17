@@ -5,11 +5,12 @@ exports.Framework7Engine = Framework7Engine_1.Framework7Engine;
 var aurelia_framework_1 = require("aurelia-framework");
 function configure(aurelia) {
     aurelia.globalResources([
-        aurelia_framework_1.PLATFORM.moduleName('./components/F7View'),
-        aurelia_framework_1.PLATFORM.moduleName('./components/F7Pages'),
-        aurelia_framework_1.PLATFORM.moduleName('./components/F7Page'),
-        aurelia_framework_1.PLATFORM.moduleName('./components/F7Navbar'),
-        aurelia_framework_1.PLATFORM.moduleName('./components/F7NavLeft')
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-bar'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-left'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-right'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-page'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-pages'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-view')
     ]);
 }
 exports.configure = configure;
