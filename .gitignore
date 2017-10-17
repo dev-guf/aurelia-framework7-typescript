@@ -59,5 +59,4 @@ typings/
 
 node_modules
 test/coverage-jest/
-dist
 /.vscode
