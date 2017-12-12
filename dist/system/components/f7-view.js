@@ -41,7 +41,7 @@ System.register(["aurelia-framework", "aurelia-templating"], function (exports_1
                 F7View = __decorate([
                     aurelia_framework_1.containerless,
                     aurelia_framework_1.customElement('f7-view'),
-                    aurelia_templating_1.inlineView("\n<template>\n<div class=\"view " + this.name + "\">\n    <slot></slot>\n</div>\n</template>\n")
+                    aurelia_templating_1.inlineView("\n<template>\n<div class=\"view ${name}\">\n    <slot></slot>\n</div>\n</template>\n")
                 ], F7View);
                 return F7View;
             }());

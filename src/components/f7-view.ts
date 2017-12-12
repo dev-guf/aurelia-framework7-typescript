@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-view')
 @inlineView(`
 <template>
-<div class="view ${ this.name }">
+<div class="view \${name}">
     <slot></slot>
 </div>
 </template>

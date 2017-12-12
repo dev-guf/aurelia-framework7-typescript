@@ -8,7 +8,7 @@ import { inlineView } from 'aurelia-templating';
 <div class="navbar">
     <div class="navbar-inner">
         <slot></slot>
-        <div class="center">${ this.title }</div>
+        <div class="center">"\${title}"</div>
     </div>
 </div>
 </template>

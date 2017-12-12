@@ -29,7 +29,7 @@ var F7View = /** @class */ (function () {
     F7View = __decorate([
         containerless,
         customElement('f7-view'),
-        inlineView("\n<template>\n<div class=\"view " + this.name + "\">\n    <slot></slot>\n</div>\n</template>\n")
+        inlineView("\n<template>\n<div class=\"view ${name}\">\n    <slot></slot>\n</div>\n</template>\n")
     ], F7View);
     return F7View;
 }());

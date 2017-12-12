@@ -16,7 +16,7 @@ var F7Navbar = /** @class */ (function () {
     F7Navbar = __decorate([
         containerless,
         customElement('f7-navbar'),
-        inlineView("\n<template>\n<div class=\"navbar\">\n    <div class=\"navbar-inner\">\n        <slot></slot>\n        <div class=\"center\">" + this.title + "</div>\n    </div>\n</div>\n</template>\n")
+        inlineView("\n<template>\n<div class=\"navbar\">\n    <div class=\"navbar-inner\">\n        <slot></slot>\n        <div class=\"center\">\"${title}\"</div>\n    </div>\n</div>\n</template>\n")
     ], F7Navbar);
     return F7Navbar;
 }());

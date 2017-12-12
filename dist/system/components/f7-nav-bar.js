@@ -28,7 +28,7 @@ System.register(["aurelia-framework", "aurelia-templating"], function (exports_1
                 F7Navbar = __decorate([
                     aurelia_framework_1.containerless,
                     aurelia_framework_1.customElement('f7-navbar'),
-                    aurelia_templating_1.inlineView("\n<template>\n<div class=\"navbar\">\n    <div class=\"navbar-inner\">\n        <slot></slot>\n        <div class=\"center\">" + this.title + "</div>\n    </div>\n</div>\n</template>\n")
+                    aurelia_templating_1.inlineView("\n<template>\n<div class=\"navbar\">\n    <div class=\"navbar-inner\">\n        <slot></slot>\n        <div class=\"center\">\"${title}\"</div>\n    </div>\n</div>\n</template>\n")
                 ], F7Navbar);
                 return F7Navbar;
             }());
