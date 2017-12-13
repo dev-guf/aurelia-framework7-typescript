@@ -2,6 +2,9 @@ import { FrameworkConfiguration } from 'aurelia-framework';
 export { Framework7Engine } from './services/Framework7Engine';
 import { PLATFORM } from 'aurelia-framework'; 
 
+import '../node_modules/framework7/dist/css/framework7.material.css';
+import '../node_modules/framework7/dist/js/framework7.js';
+
 export function configure(aurelia: FrameworkConfiguration) {
     aurelia.globalResources([
         PLATFORM.moduleName('./components/f7-nav-bar'),
