@@ -2,8 +2,18 @@ import { FrameworkConfiguration } from 'aurelia-framework';
 export { Framework7Engine } from './services/Framework7Engine';
 import { PLATFORM } from 'aurelia-framework'; 
 
-import '../node_modules/framework7/dist/css/framework7.material.css';
+
+if (MOBILE_PLATFORM.toLowerCase() == "android"){
+    require('../node_modules/framework7/dist/css/framework7.material.css');
+    
+} else {
+    require('../node_modules/framework7/dist/css/framework7.ios.css');
+}
+
 import '../node_modules/framework7/dist/js/framework7.js';
+
+
+
 
 export function configure(aurelia: FrameworkConfiguration) {
     aurelia.globalResources([
