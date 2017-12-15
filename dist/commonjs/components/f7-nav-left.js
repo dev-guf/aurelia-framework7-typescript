@@ -10,15 +10,11 @@ var aurelia_framework_1 = require("aurelia-framework");
 var aurelia_templating_1 = require("aurelia-templating");
 var F7NavLeft = /** @class */ (function () {
     function F7NavLeft() {
-        this.backLink = false;
     }
-    __decorate([
-        aurelia_framework_1.bindable
-    ], F7NavLeft.prototype, "backLink", void 0);
     F7NavLeft = __decorate([
         aurelia_framework_1.containerless,
         aurelia_framework_1.customElement('f7-nav-left'),
-        aurelia_templating_1.inlineView("\n<template>\n<div class=\"left\">        \n    <a if.bind=\"backLink\" href=\"#\" class=\"back link icon-only\">\n        <i class=\"icon icon-back\"></i>\n    </a>\n    <slot>\n    </slot>\n</div>\n</template>\n")
+        aurelia_templating_1.inlineView("\n<template>\n    <div class=\"left\">        \n        <slot></slot>\n    </div>\n</template>\n")
     ], F7NavLeft);
     return F7NavLeft;
 }());

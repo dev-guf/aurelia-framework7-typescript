@@ -24,7 +24,7 @@ System.register(["aurelia-framework", "aurelia-templating"], function (exports_1
                 F7Pages = __decorate([
                     aurelia_framework_1.containerless,
                     aurelia_framework_1.customElement('f7-pages'),
-                    aurelia_templating_1.inlineView("\n<template>\n<div class=\"pages\">\n    <slot></slot>\n</div>\n</template>\n")
+                    aurelia_templating_1.inlineView("\n<template>\n<named-slot>\n    <div class=\"pages\">\n        <slot></slot>\n    </div>\n</named-slot>\n</template>\n")
                 ], F7Pages);
                 return F7Pages;
             }());

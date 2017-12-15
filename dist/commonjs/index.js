@@ -3,14 +3,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Framework7Engine_1 = require("./services/Framework7Engine");
 exports.Framework7Engine = Framework7Engine_1.Framework7Engine;
 var aurelia_framework_1 = require("aurelia-framework");
+require("../node_modules/framework7/dist/css/framework7.material.css");
+require("../node_modules/framework7/dist/js/framework7.js");
 function configure(aurelia) {
     aurelia.globalResources([
-        aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-bar'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-block'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-center'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-link'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-list-item'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-list-link'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-list'),
         aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-left'),
         aurelia_framework_1.PLATFORM.moduleName('./components/f7-nav-right'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-navbar'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-page-content'),
         aurelia_framework_1.PLATFORM.moduleName('./components/f7-page'),
         aurelia_framework_1.PLATFORM.moduleName('./components/f7-pages'),
-        aurelia_framework_1.PLATFORM.moduleName('./components/f7-view')
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-panel-left'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-panel-overlay'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-panel-right'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-statusbar'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-view'),
+        aurelia_framework_1.PLATFORM.moduleName('./components/f7-views')
     ]);
 }
 exports.configure = configure;

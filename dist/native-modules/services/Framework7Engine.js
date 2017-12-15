@@ -6,21 +6,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { singleton } from 'aurelia-framework';
+import { inject } from 'aurelia-framework';
+import { EventAggregator } from 'aurelia-event-aggregator';
 var Framework7Engine = /** @class */ (function () {
-    function Framework7Engine() {
+    function Framework7Engine(ea) {
+        this.ea = ea;
     }
     Framework7Engine.prototype.setUpFramework7 = function () {
+        var _this = this;
+        this.ea.subscribe('view-main-attached', function () {
+            _this.mainView = _this.instance.addView('.view-main', {
+                domCache: true,
+                main: true
+            });
+        });
         this.instance = new Framework7({
             material: true,
             animateNavBackIcon: true
         });
-        this.mainView = this.instance.addView('.view-main', {
-            domCache: true,
-            main: true
-        });
     };
     Framework7Engine = __decorate([
-        singleton()
+        singleton(),
+        inject(EventAggregator)
     ], Framework7Engine);
     return Framework7Engine;
 }());

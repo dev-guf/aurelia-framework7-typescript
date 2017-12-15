@@ -5,16 +5,15 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-pages')
 @inlineView(`
 <template>
-<div class="pages">
-    <slot></slot>
-</div>
+<named-slot>
+    <div class="pages">
+        <slot></slot>
+    </div>
+</named-slot>
 </template>
 `)
 export class F7Pages {
     
-    constructor(
-       
-    ) {
-
+    constructor() {
     }
 }

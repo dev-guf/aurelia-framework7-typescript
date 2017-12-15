@@ -8,18 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var aurelia_templating_1 = require("aurelia-templating");
-var F7Navbar = /** @class */ (function () {
-    function F7Navbar() {
-        this.title = '';
+var F7Views = /** @class */ (function () {
+    function F7Views() {
     }
-    __decorate([
-        aurelia_framework_1.bindable
-    ], F7Navbar.prototype, "title", void 0);
-    F7Navbar = __decorate([
+    F7Views = __decorate([
         aurelia_framework_1.containerless,
-        aurelia_framework_1.customElement('f7-navbar'),
-        aurelia_templating_1.inlineView("\n<template>\n<div class=\"navbar\">\n    <div class=\"navbar-inner\">\n        <slot></slot>\n        <div class=\"center\">\"${title}\"</div>\n    </div>\n</div>\n</template>\n")
-    ], F7Navbar);
-    return F7Navbar;
+        aurelia_framework_1.customElement('f7-views'),
+        aurelia_templating_1.inlineView("\n<template>\n<div class=\"views\">\n    <slot></slot>\n</div>\n</template>\n")
+    ], F7Views);
+    return F7Views;
 }());
-exports.F7Navbar = F7Navbar;
+exports.F7Views = F7Views;

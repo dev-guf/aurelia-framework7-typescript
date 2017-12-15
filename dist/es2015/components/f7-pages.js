@@ -12,7 +12,7 @@ var F7Pages = /** @class */ (function () {
     F7Pages = __decorate([
         containerless,
         customElement('f7-pages'),
-        inlineView("\n<template>\n<div class=\"pages\">\n    <slot></slot>\n</div>\n</template>\n")
+        inlineView("\n<template>\n<named-slot>\n    <div class=\"pages\">\n        <slot></slot>\n    </div>\n</named-slot>\n</template>\n")
     ], F7Pages);
     return F7Pages;
 }());

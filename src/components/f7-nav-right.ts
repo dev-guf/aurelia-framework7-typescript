@@ -4,20 +4,14 @@ import { inlineView } from 'aurelia-templating';
 @containerless
 @customElement('f7-nav-right')
 @inlineView(`
-<template>
-<named-slot>  
-        <div slot="right-slot">
-            <slot>
-            </slot>>
-        </div>
-</named-slot>  
+<template> 
+    <div class="right">
+        <slot></slot>
+    </div>
 </template>
 `)
 export class F7NavRight {
 
-    constructor(
-       
-    ) {
-
+    constructor() {
     }
 }

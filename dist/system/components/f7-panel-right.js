@@ -7,7 +7,7 @@ System.register(["aurelia-framework", "aurelia-templating"], function (exports_1
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var __moduleName = context_1 && context_1.id;
-    var aurelia_framework_1, aurelia_templating_1, F7Navbar;
+    var aurelia_framework_1, aurelia_templating_1, F7PanelRight;
     return {
         setters: [
             function (aurelia_framework_1_1) {
@@ -18,21 +18,17 @@ System.register(["aurelia-framework", "aurelia-templating"], function (exports_1
             }
         ],
         execute: function () {
-            F7Navbar = /** @class */ (function () {
-                function F7Navbar() {
-                    this.title = '';
+            F7PanelRight = /** @class */ (function () {
+                function F7PanelRight() {
                 }
-                __decorate([
-                    aurelia_framework_1.bindable
-                ], F7Navbar.prototype, "title", void 0);
-                F7Navbar = __decorate([
+                F7PanelRight = __decorate([
                     aurelia_framework_1.containerless,
-                    aurelia_framework_1.customElement('f7-navbar'),
-                    aurelia_templating_1.inlineView("\n<template>\n<div class=\"navbar\">\n    <div class=\"navbar-inner\">\n        <slot></slot>\n        <div class=\"center\">\"${title}\"</div>\n    </div>\n</div>\n</template>\n")
-                ], F7Navbar);
-                return F7Navbar;
+                    aurelia_framework_1.customElement('f7-panel-right'),
+                    aurelia_templating_1.inlineView("\n<template>\n<div class=\"panel panel-right panel-reveal\">\n    <slot></slot>\n</div>\n</template>\n")
+                ], F7PanelRight);
+                return F7PanelRight;
             }());
-            exports_1("F7Navbar", F7Navbar);
+            exports_1("F7PanelRight", F7PanelRight);
         }
     };
 });

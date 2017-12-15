@@ -26,11 +26,7 @@ export class F7Page {
     @bindable 
     navbarFixed: boolean = false;
     
-
-    constructor(
-       
-    ) {
-
+    constructor() {
     }
 
     get classes(): string{

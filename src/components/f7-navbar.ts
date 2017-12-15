@@ -8,7 +8,7 @@ import { inlineView } from 'aurelia-templating';
 <div class="navbar">
     <div class="navbar-inner">
         <slot></slot>
-        <div class="center">"\${title}"</div>
+        <div class="center" if.bind="title !== ''">\${title}</div>
     </div>
 </div>
 </template>
@@ -17,9 +17,6 @@ export class F7Navbar {
     @bindable 
     title: string = '';
    
-    constructor(
-       
-    ) {
-
+    constructor() {
     }
 }

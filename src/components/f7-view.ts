@@ -1,5 +1,8 @@
-import { bindable, customElement, containerless } from 'aurelia-framework';
+import { bindable, customElement, containerless, TaskQueue } from 'aurelia-framework';
 import { inlineView } from 'aurelia-templating';
+import { inject } from 'aurelia-framework';
+import { EventAggregator } from 'aurelia-event-aggregator';
+
 
 @containerless
 @customElement('f7-view')
@@ -10,23 +13,26 @@ import { inlineView } from 'aurelia-templating';
 </div>
 </template>
 `)
+@inject(EventAggregator, TaskQueue)
 export class F7View {
     @bindable 
-    name: string;
+    name: string = '';
 
     @bindable 
-    isMainView: boolean = false; //todo: this is coming as a string see this issue: 
+    isMainView: boolean = false; //todo: this is coming as a string see this issue:
 
-    constructor(
-       
-    ) {
+    ea: EventAggregator;
 
+    constructor(EventAggregator, private taskQueue: TaskQueue) {
+        this.ea = EventAggregator;
     }
 
-    get viewName(): string{
-        if (this.isMainView){
-            return 'view-main'
+    attached(){
+        if (this.isMainView !== false){
+            this.name = 'view-main';
+            this.taskQueue.queueMicroTask(() => {
+                this.ea.publish('view-main-attached');
+            });
         }
-        return this.name;
     }
 }

@@ -24,7 +24,7 @@ System.register(["aurelia-framework", "aurelia-templating"], function (exports_1
                 F7NavRight = __decorate([
                     aurelia_framework_1.containerless,
                     aurelia_framework_1.customElement('f7-nav-right'),
-                    aurelia_templating_1.inlineView("\n<template>\n<named-slot>  \n        <div slot=\"right-slot\">\n            <slot>\n            </slot>>\n        </div>\n</named-slot>  \n</template>\n")
+                    aurelia_templating_1.inlineView("\n<template> \n    <div class=\"right\">\n        <slot></slot>\n    </div>\n</template>\n")
                 ], F7NavRight);
                 return F7NavRight;
             }());

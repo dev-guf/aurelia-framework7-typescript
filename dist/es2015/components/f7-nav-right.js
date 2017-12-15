@@ -12,7 +12,7 @@ var F7NavRight = /** @class */ (function () {
     F7NavRight = __decorate([
         containerless,
         customElement('f7-nav-right'),
-        inlineView("\n<template>\n<named-slot>  \n        <div slot=\"right-slot\">\n            <slot>\n            </slot>>\n        </div>\n</named-slot>  \n</template>\n")
+        inlineView("\n<template> \n    <div class=\"right\">\n        <slot></slot>\n    </div>\n</template>\n")
     ], F7NavRight);
     return F7NavRight;
 }());

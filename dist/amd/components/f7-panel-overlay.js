@@ -7,19 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 define(["require", "exports", "aurelia-framework", "aurelia-templating"], function (require, exports, aurelia_framework_1, aurelia_templating_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var F7Navbar = /** @class */ (function () {
-        function F7Navbar() {
-            this.title = '';
+    var F7PanelOverlay = /** @class */ (function () {
+        function F7PanelOverlay() {
         }
-        __decorate([
-            aurelia_framework_1.bindable
-        ], F7Navbar.prototype, "title", void 0);
-        F7Navbar = __decorate([
+        F7PanelOverlay = __decorate([
             aurelia_framework_1.containerless,
-            aurelia_framework_1.customElement('f7-navbar'),
-            aurelia_templating_1.inlineView("\n<template>\n<div class=\"navbar\">\n    <div class=\"navbar-inner\">\n        <slot></slot>\n        <div class=\"center\">\"${title}\"</div>\n    </div>\n</div>\n</template>\n")
-        ], F7Navbar);
-        return F7Navbar;
+            aurelia_framework_1.customElement('f7-panel-overlay'),
+            aurelia_templating_1.inlineView("\n<template>\n<div class=\"panel-overlay\">\n    <slot></slot>\n</div>\n</template>\n")
+        ], F7PanelOverlay);
+        return F7PanelOverlay;
     }());
-    exports.F7Navbar = F7Navbar;
+    exports.F7PanelOverlay = F7PanelOverlay;
 });
