@@ -21,18 +21,6 @@ export class F7Page {
     constructor() {
     }
 
-    onReinit = (e)=>{
-        //broadcast event: passing e.detail to the broadcast
-    }
-
-    attached() {
-        document.addEventListener('page:reinit',this.onReinit);
-    }
-
-    detached() {
-        document.removeEventListener('page:reinit', this.onReinit);
-    }   
-
     get classes(): string{
         var output = 'page';
         if (this.navbarThrough){

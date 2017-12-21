@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-navbar')
 @inlineView(`
 <template>
-<div class="navbar">
+<div class="\${classes}">
     <div class="navbar-inner">
         <slot></slot>
         <div class="center" if.bind="title !== ''">\${title}</div>
@@ -14,9 +14,13 @@ import { inlineView } from 'aurelia-templating';
 </template>
 `)
 export class F7Navbar {
-    @bindable 
-    title: string = '';
+    @bindable title: string = '';
    
     constructor() {
+    }
+
+    get classes(): string {
+        var output = 'navbar';
+        return output;
     }
 }

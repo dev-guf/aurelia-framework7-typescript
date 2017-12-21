@@ -6,7 +6,7 @@ import { inlineView } from 'aurelia-templating';
 @inlineView(`
 <template>
 <named-slot>
-    <div class="pages">
+    <div class="\${classes}">
         <slot></slot>
     </div>
 </named-slot>
@@ -15,5 +15,10 @@ import { inlineView } from 'aurelia-templating';
 export class F7Pages {
     
     constructor() {
+    }
+
+    get classes(): string {
+        var output = 'pages';
+        return output;
     }
 }

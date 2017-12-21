@@ -8,18 +8,14 @@ import { EventAggregator } from 'aurelia-event-aggregator';
 @customElement('f7-view')
 @inlineView(`
 <template>
-<div class="view \${name}">
+<div class="\${classes}">
     <slot></slot>
 </div>
 </template>
 `)
 @inject(EventAggregator, TaskQueue)
 export class F7View {
-    @bindable 
-    name: string = '';
-
-    @bindable 
-    isMainView: boolean = false; //todo: this is coming as a string see this issue:
+    @bindable isMainView: boolean = false;
 
     ea: EventAggregator;
 
@@ -27,12 +23,14 @@ export class F7View {
         this.ea = EventAggregator;
     }
 
-    attached(){
-        if (this.isMainView !== false){
-            this.name = 'view-main';
+    get classes(): string {
+        var output = 'view';
+        if (this.isMainView !== false) {
+            output += ' view-main';
             this.taskQueue.queueMicroTask(() => {
                 this.ea.publish('view-main-attached');
             });
         }
+        return output;
     }
 }

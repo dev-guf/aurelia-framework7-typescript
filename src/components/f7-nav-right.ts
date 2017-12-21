@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-nav-right')
 @inlineView(`
 <template> 
-    <div class="right">
+    <div class="\${classes}">
         <slot></slot>
     </div>
 </template>
@@ -13,5 +13,10 @@ import { inlineView } from 'aurelia-templating';
 export class F7NavRight {
 
     constructor() {
+    }
+    
+    get classes(): string {
+        var output = 'right';
+        return output;
     }
 }

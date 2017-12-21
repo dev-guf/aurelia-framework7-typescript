@@ -5,31 +5,31 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-block')
 @inlineView(`
 <template>
-<div class="content-block\${titleStr}\${innerStr}\${insetStr}">
+<div class="\${classes}" style="\${style}">
     <slot></slot>
 </div>
 </template>
 `)
 export class F7Block {
-    @bindable titleStr: string = '';
-    @bindable innerStr: string = '';
-    @bindable insetStr: string = '';
-
-    @bindable title: boolean = false;
     @bindable inner: boolean = false;
     @bindable inset: boolean = false;
+    @bindable backgroundColor: string = "false";
+    @bindable style: string = '';
+
     constructor() {
     }
 
-    attached() {
-        if (this.title !== false){
-            this.titleStr = '-title';
+    get classes(): string {
+        var output = 'content-block';
+        if (this.inner !== false) {
+            output += ' inner';
         }
-        if (this.inner !== false){
-            this.innerStr = ' inner';
+        if (this.inset !== false) {
+            output += ' inset';
         }
-        if (this.inset !== false){
-            this.insetStr = ' inset';
+        if (this.backgroundColor !== "false") {
+            output += ' theme-' + this.backgroundColor;
         }
+        return output;
     }
 }

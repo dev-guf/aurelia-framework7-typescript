@@ -17,7 +17,9 @@ import '../node_modules/framework7/dist/js/framework7.js';
 
 export function configure(aurelia: FrameworkConfiguration) {
     aurelia.globalResources([
+        PLATFORM.moduleName('./components/f7-block-title'),
         PLATFORM.moduleName('./components/f7-block'),
+        PLATFORM.moduleName('./components/f7-button'),
         PLATFORM.moduleName('./components/f7-center'),
         PLATFORM.moduleName('./components/f7-link'),
         PLATFORM.moduleName('./components/f7-list-item'),
@@ -29,9 +31,8 @@ export function configure(aurelia: FrameworkConfiguration) {
         PLATFORM.moduleName('./components/f7-page-content'),
         PLATFORM.moduleName('./components/f7-page'),
         PLATFORM.moduleName('./components/f7-pages'),
-        PLATFORM.moduleName('./components/f7-panel-left'),
         PLATFORM.moduleName('./components/f7-panel-overlay'),
-        PLATFORM.moduleName('./components/f7-panel-right'),
+        PLATFORM.moduleName('./components/f7-panel'),
         PLATFORM.moduleName('./components/f7-statusbar'),
         PLATFORM.moduleName('./components/f7-view'),
         PLATFORM.moduleName('./components/f7-views')

@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-nav-left')
 @inlineView(`
 <template>
-    <div class="left">        
+    <div class="\${classes}">        
         <slot></slot>
     </div>
 </template>
@@ -13,5 +13,10 @@ import { inlineView } from 'aurelia-templating';
 export class F7NavLeft {
 
     constructor() {
+    }
+
+    get classes(): string {
+        var output = 'left';
+        return output;
     }
 }

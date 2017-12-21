@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-list')
 @inlineView(`
 <template>
-<div class="list-block">
+<div class="\${classes}">
     <ul>
         <slot></slot>
     </ul>
@@ -15,5 +15,10 @@ import { inlineView } from 'aurelia-templating';
 export class F7List {
     
     constructor() {
+    }
+
+    get classes(): string {
+        var output = 'list-block';
+        return output;
     }
 }

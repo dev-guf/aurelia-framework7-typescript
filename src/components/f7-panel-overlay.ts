@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-panel-overlay')
 @inlineView(`
 <template>
-<div class="panel-overlay">
+<div class="\${classes}">
     <slot></slot>
 </div>
 </template>
@@ -13,5 +13,10 @@ import { inlineView } from 'aurelia-templating';
 export class F7PanelOverlay {
     
     constructor() {
+    }
+
+    get classes(): string {
+        var output = 'panel-overlay';
+        return output;
     }
 }
