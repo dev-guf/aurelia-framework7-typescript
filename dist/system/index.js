@@ -5,6 +5,8 @@ System.register(["./services/Framework7Engine", "aurelia-framework", "../node_mo
         aurelia.globalResources([
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-block'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-center'),
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-input'),
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-label'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-link'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-list-item'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-list-link'),

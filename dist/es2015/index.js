@@ -6,6 +6,8 @@ export function configure(aurelia) {
     aurelia.globalResources([
         PLATFORM.moduleName('./components/f7-block'),
         PLATFORM.moduleName('./components/f7-center'),
+        PLATFORM.moduleName('./components/f7-input'),
+        PLATFORM.moduleName('./components/f7-label'),
         PLATFORM.moduleName('./components/f7-link'),
         PLATFORM.moduleName('./components/f7-list-item'),
         PLATFORM.moduleName('./components/f7-list-link'),

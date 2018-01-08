@@ -15,12 +15,15 @@ import { inlineView } from 'aurelia-templating';
 `)
 export class F7Navbar {
     @bindable title: string = '';
+    @bindable color: string = 'blue';
    
     constructor() {
     }
 
     get classes(): string {
-        var output = 'navbar';
+        var output = 'navbar theme-' + this.color;
+        
         return output;
+        
     }
 }

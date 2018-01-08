@@ -2,7 +2,7 @@ import { bindable, customElement, containerless } from 'aurelia-framework';
 import { inlineView } from 'aurelia-templating';
 
 @containerless
-@customElement('f7-page')
+@customElement('f7-entry')
 @inlineView(`
 <template>
 <div data-page="\${name}" class="\${classes}">
@@ -10,7 +10,7 @@ import { inlineView } from 'aurelia-templating';
 </div>  
 </template>
 `)
-export class F7Page {
+export class F7Entry {
     @bindable name: string = '';
 
     @bindable cached: boolean = false;

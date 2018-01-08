@@ -5,9 +5,11 @@ import { PLATFORM } from 'aurelia-framework';
 
 if (MOBILE_PLATFORM.toLowerCase() == "android"){
     require('../node_modules/framework7/dist/css/framework7.material.css');
+    require('../node_modules/framework7/dist/css/framework7.material.colors.css');
     
 } else {
     require('../node_modules/framework7/dist/css/framework7.ios.css');
+    require('../node_modules/framework7/dist/css/framework7.ios.colors.css');
 }
 
 import '../node_modules/framework7/dist/js/framework7.js';
@@ -21,6 +23,8 @@ export function configure(aurelia: FrameworkConfiguration) {
         PLATFORM.moduleName('./components/f7-block'),
         PLATFORM.moduleName('./components/f7-button'),
         PLATFORM.moduleName('./components/f7-center'),
+        PLATFORM.moduleName('./components/f7-input'),
+        PLATFORM.moduleName('./components/f7-label'),
         PLATFORM.moduleName('./components/f7-link'),
         PLATFORM.moduleName('./components/f7-list-item'),
         PLATFORM.moduleName('./components/f7-list-link'),

@@ -2,24 +2,21 @@ import { customElement, containerless } from 'aurelia-framework';
 import { inlineView } from 'aurelia-templating';
 
 @containerless
-@customElement('f7-list-item')
+@customElement('f7-label')
 @inlineView(`
 <template>
-<li class="\${classes}">
-    <div class="item-inner">
-        <div class="item-title">
-            <slot></slot>
-        </div>
+    <div class="\${classes}">
+        <slot></slot>
     </div>
-</li>
 </template>
 `)
-export class F7ListItem {
+export class F7Label {
     
     constructor() {
     }
+
     get classes(): string {
-        var output = 'item-content';
+        var output = 'item-title label';
         return output;
     }
 }
