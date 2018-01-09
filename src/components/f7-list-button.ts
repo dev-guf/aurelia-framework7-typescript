@@ -2,26 +2,26 @@ import { bindable, customElement, containerless } from 'aurelia-framework';
 import { inlineView } from 'aurelia-templating';
 
 @containerless
-@customElement('f7-list')
+@customElement('f7-list-button')
 @inlineView(`
 <template>
-<div class="\${classes}">
-    <ul>
+<li>
+    <a href="#" class="\${classes}">
         <slot></slot>
-    </ul>
-</div>
+    </a>
+</li>
 </template>
 `)
-export class F7List {
-    @bindable accordion: boolean = false;
-    
+export class F7ListButton {
+    @bindable color: string;
+
     constructor() {
     }
 
     get classes(): string {
-        var output = 'list-block';
-        if (this.accordion !== false) {
-            output += ' accordion-list';
+        var output = 'item-link list-button';
+        if (this.color != undefined) {
+            output += 'button-' + this.color;
         }
         return output;
     }

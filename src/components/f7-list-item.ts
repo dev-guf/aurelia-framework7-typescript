@@ -1,4 +1,4 @@
-import { customElement, containerless } from 'aurelia-framework';
+import { bindable, customElement, containerless } from 'aurelia-framework';
 import { inlineView } from 'aurelia-templating';
 
 @containerless
@@ -6,20 +6,47 @@ import { inlineView } from 'aurelia-templating';
 @inlineView(`
 <template>
 <li class="\${classes}">
-    <div class="item-inner">
-        <div class="item-title">
-            <slot></slot>
+    <a if.bind="ifAcc" href="#" class="item-link">
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title">\${title}</div>
         </div>
+      </div>
+    </a>
+    <div class="\${classInner}">
+        <slot></slot>
     </div>
 </li>
 </template>
 `)
 export class F7ListItem {
+    @bindable accordionItem: boolean = false;
+    @bindable title: string;
     
     constructor() {
     }
+
     get classes(): string {
         var output = 'item-content';
+        if (this.accordionItem !== false) {
+            output = 'accordion-item';
+        }
         return output;
+    }
+
+    get ifAcc(): boolean {
+        if (this.accordionItem === false) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    get classInner(): string {
+        if (this.ifAcc) {
+            return '';
+        } else {
+            return 'item-inner';
+        }
     }
 }

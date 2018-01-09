@@ -7,10 +7,16 @@ import { EventAggregator } from 'aurelia-event-aggregator';
 @inlineView(`
 <template>
 <div class="\${classes}">
-    <input if.bind="!isSelect" type="\${type}" placeholder="\${placeholder}">
+    <input if.bind="isOther" type="\${type}" placeholder="\${placeholder}">
     <select if.bind="isSelect" value.bind="index" change.trigger="submit()">
-        <option repeat.for="opt of allOpt" selected.bind="$index == default - 1 ? 'selected' : ''" value.bind="\$index">\${opt}</option>
+        <option repeat.for="opt of allOpts" selected.bind="$index == default - 1 ? 'selected' : ''" value.bind="\$index + \$start">\${opt}</option>
     </select>
+    <label if.bind="isSwitch" class="label-switch">
+        <input type="checkbox" value="">
+        <div class="checkbox"></div>
+    </label>
+    <input if.bind="isRange" type="range" max="\${max}" min="\${min}" step="\${step}"></div>
+    <textarea if.bind="isTextarea" type="textarea" placeholder="Textarea"></textarea>
 </div>
 </template>
 `)
@@ -21,12 +27,36 @@ export class F7Input {
     @bindable options: string = '';
     @bindable index: number;
     @bindable default: number = 1;
+    @bindable start: number = 0;
+    @bindable max: number = 100;
+    @bindable min: number = 0;
+    @bindable step: number = 1;
 
     constructor(private ea: EventAggregator) {
     }
 
+    get isOther(): boolean {
+        if (this.isSelect || this.isSwitch || this.isRange || this.isTextarea) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     get isSelect(): boolean {
         return this.type == "select";
+    }
+
+    get isSwitch(): boolean {
+        return this.type == 'switch';
+    }
+
+    get isRange(): boolean {
+        return this.type == 'range';
+    }
+
+    get isTextarea(): boolean {
+        return this.type == 'textarea';
     }
 
     get classes(): string {
@@ -34,7 +64,7 @@ export class F7Input {
         return output;
     }
 
-    get allOpt(): string[] {
+    get allOpts(): string[] {
         return this.options.split(", ");
     }
 

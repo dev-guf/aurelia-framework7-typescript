@@ -1,6 +1,5 @@
-import { bindable, customElement, containerless, TaskQueue } from 'aurelia-framework';
+import { bindable, customElement, containerless, TaskQueue, inject } from 'aurelia-framework';
 import { inlineView } from 'aurelia-templating';
-import { inject } from 'aurelia-framework';
 import { EventAggregator } from 'aurelia-event-aggregator';
 
 
