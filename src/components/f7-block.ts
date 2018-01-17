@@ -15,6 +15,7 @@ export class F7Block {
     @bindable inset: boolean = false;
     @bindable backgroundColor: string = "false";
     @bindable style: string = '';
+    @bindable class: string = '';
 
     constructor() {
     }
@@ -29,6 +30,9 @@ export class F7Block {
         }
         if (this.backgroundColor !== "false") {
             output += ' theme-' + this.backgroundColor;
+        }
+        if (this.class !== "false") {
+            output +=  ' ' + this.class;
         }
         return output;
     }

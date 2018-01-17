@@ -6,7 +6,7 @@ import { inlineView } from 'aurelia-templating';
 @inlineView(`
 <template>
 <li>
-    <a class="\${classes}" href="\${hrefString}">
+    <a class="\${classes}" href="\${hrefString}" click.delegate="click()">
         <table class="item-inner">
             <tr>
                 <th>
@@ -40,6 +40,7 @@ export class F7ListLink {
     @bindable type: string = '';
     @bindable needCheck: string = 'hidden';
     @bindable iconCheck: boolean = false;
+    @bindable click: Function;
     break: string = 'none';
 
     constructor() {
