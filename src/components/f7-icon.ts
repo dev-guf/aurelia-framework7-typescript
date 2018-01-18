@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-icon')
 @inlineView(`
 <template>
-    <i class="\${classes}" style="\${sizeStr}">
+    <i class="\${classes}" css="\${sizeStr}">
         \${f7}\${material}
     </i>
 </template>

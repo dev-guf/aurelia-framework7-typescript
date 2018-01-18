@@ -6,7 +6,7 @@ import { EventAggregator } from 'aurelia-event-aggregator';
 @customElement('f7-popup')
 @inlineView(`
 <template>
-<div class="\${classes}" style="\${style}" opened="\${opened}">
+<div class="\${classes}" css="\${style}" opened="\${opened}">
     <slot></slot>
 </div>
 </template>

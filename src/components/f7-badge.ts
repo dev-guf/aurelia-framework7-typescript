@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-badge')
 @inlineView(`
 <template>
-<span class="\${classes}" style="\${style}">
+<span class="\${classes}" css="\${style}">
     <slot></slot>
 </span>
 </template>

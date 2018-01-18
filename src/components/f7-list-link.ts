@@ -10,15 +10,15 @@ import { inlineView } from 'aurelia-templating';
         <table class="item-inner">
             <tr>
                 <th>
-                    <div class="item-title" style="min-width: 110px;"><i class="f7-icons size-22">\${iconLeftstr}</i><i class="f7-icons size-14">\${iconCheckstr}<span style="display: \${break}">&emsp;</span></i><b>\${textLeft}</b></div>
+                    <div class="item-title" css="min-width: 110px;"><i class="f7-icons size-22">\${iconLeftstr}</i><i class="f7-icons size-14">\${iconCheckstr}<span css="display: \${break}">&emsp;</span></i><b>\${textLeft}</b></div>
                 </th>
                 <th>
-                    <div class="item-title" style="min-width: \${rightWidth}px; float: right; text-align: right;">\${textRight}<slot></slot></div>
+                    <div class="item-title" css="min-width: \${rightWidth}px; float: right; text-align: right;">\${textRight}<slot></slot></div>
                 </th>
             </tr>
-            <tr style="display: \${oneLiner}">
+            <tr css="display: \${oneLiner}">
                 <td colspan = "2";>
-                    <div class="item-title" style="font-size=10px;"><i class="f7-icons size-14">\${icon}</i>\${textCenter}</div>
+                    <div class="item-title" css="font-size=10px;"><i class="f7-icons size-14">\${icon}</i>\${textCenter}</div>
                 </td>
             </tr>
         </table>

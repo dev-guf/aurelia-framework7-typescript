@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-accordion-item')
 @inlineView(`
 <template>
-<div class="\${classes}" style="\${style}">
+<div class="\${classes}" css="\${style}">
     <slot></slot>
 </div>
 </template>

@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-chip')
 @inlineView(`
 <template>
-<span class="\${classes}" style="\${style}">
+<span class="\${classes}" css="\${style}">
     <span if.bind="isMedia" class="\${medialabel}">
         <img src=\"\${media}\">
     </span>

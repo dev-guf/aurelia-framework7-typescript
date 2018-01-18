@@ -5,7 +5,7 @@ import { inlineView } from 'aurelia-templating';
 @customElement('f7-card')
 @inlineView(`
 <template>
-<div class="\${classes}" style="\${style}">
+<div class="\${classes}" css="\${style}">
     <div class="card-header">\${title}</div>
     <div if.bind="innerTest" class="card-content">
         <div class="card-content-inner">\${content}</div>
