@@ -43,6 +43,7 @@ define(["require", "exports", "./services/Framework7Engine", "aurelia-framework"
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-pages'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-panel-overlay'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-panel'),
+            aurelia_framework_1.PLATFORM.moduleName('./components/f7-popover'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-popup'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-statusbar'),
             aurelia_framework_1.PLATFORM.moduleName('./components/f7-tab'),

@@ -43,6 +43,7 @@ export function configure(aurelia) {
         PLATFORM.moduleName('./components/f7-pages'),
         PLATFORM.moduleName('./components/f7-panel-overlay'),
         PLATFORM.moduleName('./components/f7-panel'),
+        PLATFORM.moduleName('./components/f7-popover'),
         PLATFORM.moduleName('./components/f7-popup'),
         PLATFORM.moduleName('./components/f7-statusbar'),
         PLATFORM.moduleName('./components/f7-tab'),
